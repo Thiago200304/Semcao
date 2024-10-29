@@ -14,6 +14,7 @@ public class CharacterDialogue : MonoBehaviour
     public Image _portrait;
     public Sprite portraitA;
     public Sprite portraitB;
+    public Sprite portraitC;
 
     public GameObject NCP_01Avatar;
 
@@ -183,7 +184,7 @@ public class CharacterDialogue : MonoBehaviour
         if (playerState == 0)
 
         {
-            _portrait.sprite = portraitA;
+            _portrait.sprite = portraitC;
             //  myAudio.clip = som1;
             //  myAudio.Play();
             index = 0;
@@ -222,8 +223,8 @@ public class CharacterDialogue : MonoBehaviour
             // myAudio.Play();
             index = 0;
             sentences = new string[2];
-            sentences[0] = "Augusto: O que acha de nós nos dividirmos para conseguirmos fazer todas as perguntas?";
-            sentences[1] = "Augusto: Aí se a gente ficar com dúvida em alguma questão a gente pergunta pro outro, pode ser?";
+            sentences[0] = "Augusto: Vamos nos dividir para responder as perguntas, vou começar aqui.";
+            sentences[1] = "Augusto: Viu, você tem uma borracha pra me emprestar? Perdi a minha.";
 
             _dialogueText.text = sentences[0];
 
@@ -260,7 +261,7 @@ public class CharacterDialogue : MonoBehaviour
             //  myAudio.clip = som2;
             // myAudio.Play();
             index = 0;
-            sentences = new string[3];
+            sentences = new string[1];
 
             _portrait.sprite = portraitB;
 
@@ -269,17 +270,15 @@ public class CharacterDialogue : MonoBehaviour
             if (GameData.goodKarma == 1)
             {
                 _portrait.sprite = portraitB;
-                sentences[0] = "Isto é o teste 3-1 de karma bom";
-                sentences[1] = "Isto é o teste 3-2 de karma bom";
-                sentences[2] = "Isto é o teste 3-3 de karma bom";
+                sentences[0] = "*Ainda bem que devolvi, ele usou ela logo na sequência*";
+
             }
 
             if (GameData.badKarma == 1)
             {
                 _portrait.sprite = portraitA;
-                sentences[0] = "Isto é o teste 3-1 de karma ruim";
-                sentences[1] = "Isto é o teste 3-2 de karma ruim";
-                sentences[2] = "Isto é o teste 3-3 de karma ruim";
+                sentences[0] = "*Ele precisou usar a borracha e ficou bravo comigo...*";
+
             }
 
 

@@ -211,10 +211,10 @@ public class NPC_01 : MonoBehaviour
             //  myAudio.clip = som2;
             // myAudio.Play();
             index = 0;
-            sentences = new string[3];
-            sentences[0] = "Isto é o teste NPC 2-1";
-            sentences[1] = "Isto é o teste NPC 2-2";
-            sentences[2] = "Isto é o teste NPC 2-3";
+            sentences = new string[1];
+            sentences[0] = "Beleza então, vou começar aqui também. Pode pegar a borracha ai!";
+            //sentences[1] = "Isto é o teste NPC 2-2";
+            //sentences[2] = "Isto é o teste NPC 2-3";
 
             _dialogueText.text = sentences[0];
 
